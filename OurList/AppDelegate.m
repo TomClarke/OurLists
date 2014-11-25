@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +23,11 @@
     [Parse setApplicationId:@"CmKapU1M13hWIWSD9xSY2pPDklIHrEcJEjnrmL5b"
                   clientKey:@"hKcQUztnamCCKUbGmY57qBSCxzFlj1ASDNNYAEnN"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+     _window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+    
+      [PFFacebookUtils initializeFacebook];
+    
+    
     return YES;
 }
 
@@ -40,10 +47,23 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // Logs 'install' and 'app activate' App Events.
+     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+    [FBAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+      [[PFFacebookUtils session] close];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:[PFFacebookUtils session]];
 }
 
 @end
