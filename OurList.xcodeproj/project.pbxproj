@@ -21,6 +21,7 @@
 		4318DFDD1A25153B00A900CC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318DFDC1A25153B00A900CC /* Security.framework */; };
 		4318DFDF1A25154300A900CC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318DFDE1A25154300A900CC /* StoreKit.framework */; };
 		4318DFE11A25155000A900CC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318DFE01A25155000A900CC /* SystemConfiguration.framework */; };
+		4318DFE51A25172F00A900CC /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4318DFE41A25172F00A900CC /* ListTableViewController.m */; };
 		43B52D3F1A25122F0082F43F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B52D3E1A25122F0082F43F /* main.m */; };
 		43B52D421A25122F0082F43F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B52D411A25122F0082F43F /* AppDelegate.m */; };
 		43B52D451A25122F0082F43F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B52D441A25122F0082F43F /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		4318DFDC1A25153B00A900CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4318DFDE1A25154300A900CC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4318DFE01A25155000A900CC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4318DFE31A25172F00A900CC /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		4318DFE41A25172F00A900CC /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		43B52D391A25122F0082F43F /* OurList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B52D3D1A25122F0082F43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B52D3E1A25122F0082F43F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				43B52D491A25122F0082F43F /* Images.xcassets */,
 				43B52D4B1A25122F0082F43F /* LaunchScreen.xib */,
 				43B52D3C1A25122F0082F43F /* Supporting Files */,
+				4318DFE31A25172F00A900CC /* ListTableViewController.h */,
+				4318DFE41A25172F00A900CC /* ListTableViewController.m */,
 			);
 			path = OurList;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B52D451A25122F0082F43F /* ViewController.m in Sources */,
+				4318DFE51A25172F00A900CC /* ListTableViewController.m in Sources */,
 				43B52D421A25122F0082F43F /* AppDelegate.m in Sources */,
 				43B52D3F1A25122F0082F43F /* main.m in Sources */,
 			);

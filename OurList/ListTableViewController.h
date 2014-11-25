@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UITableViewController+ListTableViewController.h
 //  OurList
 //
 //  Created by Thomas Clarke on 25/11/2014.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface ViewController : UITableViewController
-
-
+@interface ListTableViewController : UITableViewController 
 
 @end
-
